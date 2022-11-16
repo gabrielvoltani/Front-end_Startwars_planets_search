@@ -2,7 +2,10 @@ import { useContext } from 'react';
 import AppContext from '../context/AppContext';
 
 function Table() {
-  const { data } = useContext(AppContext);
+  const { data, planet } = useContext(AppContext);
+
+  const filterByName = (e) => e.name.toLowerCase()
+    .includes(planet.toLowerCase());
 
   return (
     <table>
@@ -25,21 +28,21 @@ function Table() {
       </thead>
       <tbody>
         {
-          data.map((planet) => (
-            <tr key={ planet.name }>
-              <td>{planet.name}</td>
-              <td>{planet.rotation_period}</td>
-              <td>{planet.orbital_period}</td>
-              <td>{planet.diameter}</td>
-              <td>{planet.climate}</td>
-              <td>{planet.gravity}</td>
-              <td>{planet.terrain}</td>
-              <td>{planet.surface_water}</td>
-              <td>{planet.population}</td>
-              <td>{planet.films}</td>
-              <td>{planet.created}</td>
-              <td>{planet.edited}</td>
-              <td>{planet.url}</td>
+          data.filter(filterByName).map((planets) => (
+            <tr key={ planets.name }>
+              <td data-testid="planet-name">{planets.name}</td>
+              <td>{planets.rotation_period}</td>
+              <td>{planets.orbital_period}</td>
+              <td>{planets.diameter}</td>
+              <td>{planets.climate}</td>
+              <td>{planets.gravity}</td>
+              <td>{planets.terrain}</td>
+              <td>{planets.surface_water}</td>
+              <td>{planets.population}</td>
+              <td>{planets.films}</td>
+              <td>{planets.created}</td>
+              <td>{planets.edited}</td>
+              <td>{planets.url}</td>
             </tr>
           ))
         }
