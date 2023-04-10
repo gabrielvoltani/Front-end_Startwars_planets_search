@@ -1,10 +1,16 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Front-end Star Wars Planets Search
+
+This is a web application that allows users to search for Star Wars planets using the SWAPI (Star Wars API). The application was built using React and CSS.
+
+## Features
+
+- Users can search for planets using the search bar.
+- The search results are displayed on the page.
+- Users can click on a planet to view additional details about it.
+- The application is responsive and works on different screen sizes.
+
+## Technologies
+
+- React
+- CSS
+- SWAPI (Star Wars API)
